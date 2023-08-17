@@ -1,6 +1,6 @@
 # Full Stack Todos App
 
-![App Demo](https://github.com/abdurakhmonovsharif/todo_fs_app/assets/115024917/2a54e9ee-3e7d-4169-88ec-eacf83e6506e)
+![App Demo](https://github.com/abdurakhmonovsharif/todo_fs_app/assets/115024917/0883357a-8a86-4680-a9a1-11ebd8ba5b9c)
 
 A full-stack Todos app built using the PERN (PostgreSQL, Express.js, React, Node.js) stack. This app allows you to manage your tasks effectively with a user-friendly interface.
 
