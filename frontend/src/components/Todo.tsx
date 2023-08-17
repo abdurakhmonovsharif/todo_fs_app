@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import { clearUser } from '../redux/stateReducers/userReducer';
 function Todo() {
     const token = localStorage.getItem("user_token")
+    const auth = localStorage.getItem("auth")
     const currentUser = useSelector((state: any) => state.user);
     const { data, refetch, error }: any = useGetTodosQuery(currentUser.id, { skip: !currentUser.id || !token });
     const [deleteTodoMutation] = useDeleteTodoMutation();
@@ -24,6 +25,13 @@ function Todo() {
     const [addTodo] = useAddTodoMutation();
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    useEffect(() => {
+        if (auth && auth === "true") {
+            // open
+        } else {
+            navigate("/login")
+        }
+    }, [window.location.pathname])
     useEffect(() => {
         if (currentUser != null) {
             if (error?.status == 401) {
