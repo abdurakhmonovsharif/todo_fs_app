@@ -4,7 +4,7 @@ const route = new Router();
 const todoController = require("../controllers/TodoController");
 const authenticateUser = require("../security/authenticateUser");
 
-// Add the authentication middleware to the /users route
+// Add the authentication middleware to the /todos route
 route.get("/todos/:id", authenticateUser, todoController.getTodosById);
 route.post("/todos", authenticateUser, todoController.postTodo);
 route.put("/todos/:id", authenticateUser, todoController.updateTodoById);
